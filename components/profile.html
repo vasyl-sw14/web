@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+        <header>
+            <p>Hyrecar</p>
+        </header>
+        <div class="content">
+            <p class="headline">Profile</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" />
+            <div class="userData">
+                <label>First and Last name:</label>
+                <input placeholder="First and Last name" value="John Doe"/>
+            </div>
+            <div class="userData">
+                <label>Email:</label>
+                <input placeholder="Email" value="user@gmail.com"/>
+            </div>
+            <button id="save" class="button" href="#">Save</button>
+            <button id="logout" class="button" href="#">Log out</button>
+        </div>
+        <script type="text/javascript">
+            document.getElementById("logout").onclick = function () {
+                location.href = "./login.html";
+            };
+        </script>
+    </body>
+</html>

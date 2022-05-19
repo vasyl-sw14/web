@@ -1,0 +1,97 @@
+$fontsize: 16px;
+$padding: 10px;
+$font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+* {margin: 0; padding: 0;}
+
+body {
+  padding: 0px;
+}
+
+.content {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  padding: $padding;
+  font-size: $fontsize;
+  font-family: $font;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #4773F3;
+}
+
+button {
+  background-color: #4773F3;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: $padding;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: $fontsize;
+  font-family: $font;
+  margin: 4px 2px;
+}
+
+.headline {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px;
+  font-family: $font;
+}
+
+header {
+  background-color: #4773F3;
+  width: 100%;
+  color: white;
+  overflow: auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-family: $font;
+  font-weight: bold;
+}
+
+label {
+  font-size: $fontsize;
+  font-family: $font;
+  font-weight: 600;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+a {
+  margin-top: 10px;
+  color: #4773F3;
+  font-family: $font;
+  font-size: $fontsize;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.userData {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+@media screen and (max-width: 500px) {
+  img {
+    height: 75px;
+    width: 75px;
+  }
+}
+  
