@@ -101,6 +101,10 @@ a {
   color: #3eda26;
 }
 
+#delete {
+  background-color: red;
+}
+
 @media screen and (max-width: 500px) {
   img {
     height: 75px;
