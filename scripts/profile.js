@@ -2,6 +2,7 @@ const backendUrl = 'http://127.0.0.1:8080/api/v1/user';
 
 const logoutButton = document.getElementById('logout');
 const saveButton = document.getElementById('save');
+const deleteButton = document.getElementById('delete');
 const errorMessage = document.getElementById('error_message');
 const statusMessage = document.getElementById('status_message');
 
@@ -46,10 +47,39 @@ function updateUser(userData) {
     });
 }
 
+function deleteUser() {
+    const headers = new Headers();
+    headers.set('Authorization', 'Bearer ' + window.localStorage.getItem('token'));
+    return fetch(backendUrl, {
+        method: 'DELETE',
+        headers
+    });
+}
+
 function logoutButtonHandler(event) {
     event.preventDefault();
     window.localStorage.removeItem('token');
     window.location.href = '../components/login.html';
+}
+
+function deleteButtonHandler(event) {
+    event.preventDefault();
+
+    deleteUser().then(async (response) => {
+        if (response.status !== 200) {
+            throw new Error(await response.text());
+        }
+
+        return response.text();
+    }).then(() => {
+        window.localStorage.removeItem('token');
+        window.location.href = '../components/login.html';
+    }).catch((error) => {
+        errorMessage.textContent = error.message;
+        setTimeout(() => {
+            errorMessage.textContent = null; 
+        }, 5000);
+    })
 }
 
 function saveButtonHandler(event) {
@@ -93,4 +123,5 @@ function saveButtonHandler(event) {
 
 logoutButton.addEventListener('click', logoutButtonHandler);
 saveButton.addEventListener('click', saveButtonHandler);
+deleteButton.addEventListener('click', deleteButtonHandler);
 window.addEventListener('load', getUser);
