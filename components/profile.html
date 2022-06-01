@@ -11,20 +11,23 @@
             <p class="headline">Profile</p>
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" alt="Profile"/>
             <div class="userData">
+                <label>User ID:</label>
+                <input id="user_id" placeholder="ID" disabled />
+            </div>
+            <div class="userData">
                 <label>First and Last name:</label>
-                <input placeholder="First and Last name" value="John Doe"/>
+                <input id="full_name" placeholder="First and Last name"/>
             </div>
             <div class="userData">
                 <label>Email:</label>
-                <input placeholder="Email" value="user@gmail.com"/>
+                <input id="email" placeholder="Email"/>
             </div>
             <button id="save" class="button">Save</button>
+            <div id="error_message"></div>
+            <div id="status_message"></div>
             <button id="logout" class="button">Log out</button>
+            
         </div>
-        <script type="text/javascript">
-            document.getElementById("logout").onclick = function () {
-                location.href = "./login.html";
-            };
-        </script>
+        <script src="../scripts/profile.js"></script>
     </body>
 </html>

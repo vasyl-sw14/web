@@ -1,5 +1,9 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Login</title>
         <link rel="stylesheet" href="../styles/style.css">
     </head>
@@ -9,15 +13,17 @@
         </header>
         <div class="content">
             <p class="headline">Login</p>
-            <input placeholder="Email" />
-            <input placeholder="Password" />
+            <input id="username" type="text" placeholder="Email" />
+            <input id="password" type="password" placeholder="Password" />
             <button id="submit" class="button" href="#">Log in</button>
+            <div id="error_message"></div>
             <a href="./register.html">Don't have an account? Sign up</a>
         </div>
-        <script type="text/javascript">
+        <script src="../scripts/login.js"></script>
+        <!-- <script type="text/javascript">
             document.getElementById("submit").onclick = function () {
                 location.href = "./profile.html";
             };
-        </script>
+        </script> -->
     </body>
 </html>
