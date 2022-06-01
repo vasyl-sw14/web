@@ -9,17 +9,14 @@
         </header>
         <div class="content">
             <p class="headline">Welcome</p>
-            <input placeholder="First and Last name" />
-            <input placeholder="Email" />
-            <input placeholder="Password" />
-            <input placeholder="Confirm password" />
+            <input id="fullName" type="text" placeholder="First and Last name" />
+            <input id="email" type="text" placeholder="Email" />
+            <input id="password" type="password" placeholder="Password" />
+            <input id="confirm_password" type="password" placeholder="Confirm password" />
             <button id="submit" class="button" href="#">Sign up</button>
+            <div id="error_message"></div>
             <a href="./login.html">Already have an account? Sign in</a>
         </div>
-        <script type="text/javascript">
-            document.getElementById("submit").onclick = function () {
-                location.href = "./login.html";
-            };
-        </script>
+        <script src="../scripts/register.js"></script>
     </body>
 </html>

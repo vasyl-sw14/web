@@ -88,6 +88,20 @@ a {
   align-items: left;
 }
 
+#error_message {
+  font-family: $font;
+  font-size: $fontsize;
+  font-weight: 600;
+  color: red;
+}
+
+#status_message {
+  font-family: $font;
+  font-size: $fontsize;
+  font-weight: 600;
+  color: rgb(62, 218, 38);
+}
+
 @media screen and (max-width: 500px) {
   img {
     height: 75px;
