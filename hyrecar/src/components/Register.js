@@ -70,7 +70,7 @@ const Register = () => {
           Sign up
         </button>
         <div id="error_message">{errorMessage}</div>
-        <a onClick={() => navigate("/login")}>
+        <a href="#" onClick={() => navigate("/login")}>
           Already have an account? Sign in
         </a>
       </div>

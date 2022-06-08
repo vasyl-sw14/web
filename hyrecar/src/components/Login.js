@@ -53,7 +53,7 @@ const Login = () => {
           Log in
         </button>
         <div id="error_message">{errorMessage}</div>
-        <a onClick={() => navigate("/register")}>
+        <a href="#" onClick={() => navigate("/register")}>
           Don't have an account? Sign up
         </a>
       </div>
