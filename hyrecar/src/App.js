@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Profile from "./components/Profile";
-import Login from "./components/Login";
-import Register from "./components/Register";
+import Profile from "./components/Profile/Profile";
+import Login from "./components/Auth/Login";
+import Register from "./components/Auth/Register";
 import Home from "./components/Home";
-import AddCar from "./components/AddCar";
-import MyCars from "./components/MyCars";
-import EditCar from "./components/EditCar";
-import MyRents from "./components/MyRents";
+import AddCar from "./components/Car/AddCar";
+import MyCars from "./components/Car/MyCars";
+import EditCar from "./components/Car/EditCar";
+import MyRents from "./components/Rent/MyRents";
 
 function App() {
   return (
