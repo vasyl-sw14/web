@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Header from "./Header";
+import Header from "../Header/Header";
 
 const MyCars = () => {
   const [cars, setCars] = useState([]);

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Modal from "react-modal";
-import Header from "./Header";
+import Header from "./Header/Header";
 
 const Home = () => {
   const [cars, setCars] = useState([]);
@@ -10,26 +10,30 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!localStorage.getItem("token")) {
-      navigate("/login");
-      return;
-    }
-    fetch("http://127.0.0.1:8080/api/v1/cars")
-      .then(async (response) => {
-        if (response.status !== 200) {
-          throw new Error(await response.text());
-        }
-
-        return response.json();
-      })
-      .then((json) => {
-        console.log(json.cars);
-        setCars(json.cars);
-      })
-      .catch(() => {
-        localStorage.removeItem("token");
+    const getData = async () => {
+      if (!localStorage.getItem("token")) {
         navigate("/login");
-      });
+        return;
+      }
+      fetch("http://127.0.0.1:8080/api/v1/cars")
+        .then(async (response) => {
+          if (response.status !== 200) {
+            throw new Error(await response.text());
+          }
+
+          return response.json();
+        })
+        .then((json) => {
+          console.log(json.cars);
+          setCars(json.cars);
+        })
+        .catch(() => {
+          localStorage.removeItem("token");
+          navigate("/login");
+        });
+    };
+
+    getData();
   }, []);
 
   return (

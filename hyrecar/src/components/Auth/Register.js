@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Header from "./Header";
-import "../styles/Base.css";
+import Header from "../Header/Header";
+import "../../styles/Base.css";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
